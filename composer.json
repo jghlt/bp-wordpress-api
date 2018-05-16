@@ -1,0 +1,47 @@
+{
+  "name": "jghlt/bp-wordpress-api",
+  "type": "project",
+  "license": "MIT",
+  "description": "Simple structured staring point for semi-headless wordPress builds",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.6.9",
+        "type": "wordpress-plugin",
+        "dist": {
+            "type": "zip",
+            "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
+        }
+      }
+    }
+  ],
+  "require": {
+    "composer/installers": "^1.4",
+    "johnpbloch/wordpress": "4.9.4",
+    "altorouter/altorouter": ">=1.1.0",
+    "upstatement/routes": ">=0.4",
+    "wpackagist-plugin/acf-link-picker-field": "1.2.8",
+    "wpackagist-plugin/disable-json-api": "1.4.3",
+    "wpackagist-plugin/iq-block-country": "1.4.41",
+    "wpackagist-plugin/simple-custom-post-order": "2.3.2",
+    "wpackagist-plugin/timber-library": "1.7.0",
+    "wpackagist-plugin/wordfence": "7.0.5",
+    "vlucas/phpdotenv": "^2.4",
+    "philippbaschke/acf-pro-installer": "^1.0",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.6"
+  },
+  "extra": {
+    "installer-paths": {
+      "public/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "public/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "public/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "public/wp"
+  }
+}

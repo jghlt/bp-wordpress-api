@@ -1,0 +1,93 @@
+# osx noise
+######################
+.DS_Store
+profile
+
+# xcode noise
+######################
+build/*
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
+*.log
+
+# svn & cvs
+######################
+.svn
+CVS
+
+# sublime noise
+######################
+*.sublime-project
+*.sublime-workspace
+
+# Ignore sass
+######################
+.sass-cache
+
+# Ignore node modules
+######################
+node_modules/*
+
+# deployments #
+######################
+dploy.yaml
+.rev
+
+# Ignore backups/admin/working directories
+######################
+notes.md
+todo.md
+admin/*
+backups/*
+working/*
+
+# Ignore dist & build files
+######################
+public/app/themes/**/assets/fonts/*
+public/app/themes/**/assets/css/*
+public/app/themes/**/assets/js/*
+public/app/themes/**/dist/*
+
+# Ignore env
+######################
+.env
+
+# Ignore vendor
+######################
+vendor/*
+
+# Ignore wordpress crap
+# edited from http://www.stumiller.me/what-should-be-excluded-in-a-wordpress-gitignore-file/
+######################
+public/wp/
+public/wp/readme.*
+public/wp/wp-app/*
+public/app/plugins/*
+public/app/uploads/*
+public/app/upgrade/*
+public/app/languages/*
+public/app/blogs.dir/
+public/app/upgrade/
+public/app/backup-db/
+public/app/object-cache.php
+public/app/advanced-cache.php
+public/app/wp-cache-config.php
+public/app/db.php
+app/w3tc-config/*
+public/app/ewww/*
+public/app/cache/*
+public/app/cache/
+public/app/backups/
+public/app/db.php
+public/app/cache/supercache/*
+public/app/wflogs/*
+configCache.php
+advanced-cache.php
+wp-cache-config.php
+w3tc-wp-loader.php
