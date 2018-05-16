@@ -2,7 +2,7 @@
   "name": "jghlt/bp-wordpress-api",
   "type": "project",
   "license": "MIT",
-  "description": "Simple structured staring point for semi-headless wordPress builds",
+  "description": "Simple structured staring point for semi-headless wordpress builds",
   "repositories": [
     {
       "type": "composer",
