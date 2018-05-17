@@ -60,15 +60,15 @@
 
     function api_remove_admin_bar_nodes()
     {
-        global $wp_admin_bar;
+      global $wp_admin_bar;
 
-        $wp_admin_bar->remove_node('new-post');
-        $wp_admin_bar->remove_node('new-link');
-        $wp_admin_bar->remove_node('new-media');
-        $wp_admin_bar->remove_node('new-page');
-        $wp_admin_bar->remove_node('new-user');
-        $wp_admin_bar->remove_node('wp-logo');
-        $wp_admin_bar->remove_node('comments');
+      $wp_admin_bar->remove_node('new-post');
+      $wp_admin_bar->remove_node('new-link');
+      $wp_admin_bar->remove_node('new-media');
+      $wp_admin_bar->remove_node('new-page');
+      $wp_admin_bar->remove_node('new-user');
+      $wp_admin_bar->remove_node('wp-logo');
+      $wp_admin_bar->remove_node('comments');
     }
 
 
@@ -81,14 +81,14 @@
     function api_remove_admin_menu_items()
     {
 
-        // remove_menu_page('edit.php?post_type=page');
-        remove_menu_page('edit.php');
-        remove_menu_page('edit-comments.php');
-        remove_menu_page('link-manager.php');
-        // remove_menu_page('upload.php');
-        remove_menu_page('plugins.php');
-        remove_menu_page('themes.php');
-        // remove_menu_page('tools.php');
+      // remove_menu_page('edit.php?post_type=page');
+      remove_menu_page('edit.php');
+      remove_menu_page('edit-comments.php');
+      remove_menu_page('link-manager.php');
+      // remove_menu_page('upload.php');
+      remove_menu_page('plugins.php');
+      remove_menu_page('themes.php');
+      // remove_menu_page('tools.php');
     }
 
 
@@ -101,20 +101,20 @@
       function api_customize_meta_boxes()
       {
 
-          // posts
-          remove_post_type_support('post', 'author');
-          remove_post_type_support('post', 'editor');
-          remove_post_type_support('post', 'excerpt');
-          remove_post_type_support('post', 'comments');
-          remove_post_type_support('post', 'revisions');
-          remove_post_type_support('post', 'trackbacks');
-          remove_post_type_support('post', 'custom-fields');
+        // posts
+        remove_post_type_support('post', 'author');
+        remove_post_type_support('post', 'editor');
+        remove_post_type_support('post', 'excerpt');
+        remove_post_type_support('post', 'comments');
+        remove_post_type_support('post', 'revisions');
+        remove_post_type_support('post', 'trackbacks');
+        remove_post_type_support('post', 'custom-fields');
 
-          // pages
-          remove_post_type_support('page', 'editor');
-          remove_post_type_support('page', 'author');
-          remove_post_type_support('page', 'comments');
-          remove_post_type_support('page', 'trackbacks');
+        // pages
+        remove_post_type_support('page', 'editor');
+        remove_post_type_support('page', 'author');
+        remove_post_type_support('page', 'comments');
+        remove_post_type_support('page', 'trackbacks');
       }
 
 
@@ -126,10 +126,10 @@
 
     function api_remove_dashboard_widgets()
     {
-        global $wp_meta_boxes;
+      global $wp_meta_boxes;
 
-        // removes everything
-        unset($wp_meta_boxes['dashboard']);
+      // removes everything
+      unset($wp_meta_boxes['dashboard']);
     }
 
 
@@ -141,8 +141,8 @@
 
     function api_remove_help_tabs($old_help, $screen_id, $screen)
     {
-        $screen->remove_help_tabs();
-        return $old_help;
+      $screen->remove_help_tabs();
+      return $old_help;
     }
 
 
@@ -154,18 +154,18 @@
 
     function api_custom_login_logo()
     {
-        echo '<style type="text/css">
-            body,
-            html{
-                background-color:#F8F8F8 !important;
-            }
+      echo '<style type="text/css">
+        body,
+        html{
+            background-color:#F8F8F8 !important;
+        }
 
-            .login h1 a {
-                background: url('.get_bloginfo('template_directory').'/assets/src/icons/login.png) !important;
-                background-repeat:no-repeat;
-                background-size:cover !important;
-            }
-        </style>';
+        .login h1 a {
+            background: url('.get_bloginfo('template_directory').'/assets/src/icons/login.png) !important;
+            background-repeat:no-repeat;
+            background-size:cover !important;
+        }
+      </style>';
     }
 
 
@@ -177,7 +177,7 @@
 
     function api_custom_login_link()
     {
-        return get_bloginfo('url');
+      return get_bloginfo('url');
     }
 
 
@@ -189,18 +189,18 @@
 
     function api_clear_custom_cache($post_id)
     {
-        if (($post_id == 0 || $post_id == 'options') && !defined('DOING_AUTOSAVE')) {
-            global $blog_cache_dir;
+      if (($post_id == 0 || $post_id == 'options') && !defined('DOING_AUTOSAVE')) {
+        global $blog_cache_dir;
 
-            if (isset($wp_cache_object_cache)) {
-                reset_oc_version();
-            } else {
-                if (function_exists('prune_super_cache')) {
-                    prune_super_cache($blog_cache_dir, true);
-                    prune_super_cache(get_supercache_dir(), true);
-                }
-            }
+        if (isset($wp_cache_object_cache)) {
+          reset_oc_version();
+        } else {
+          if (function_exists('prune_super_cache')) {
+            prune_super_cache($blog_cache_dir, true);
+            prune_super_cache(get_supercache_dir(), true);
+          }
         }
+      }
 
-        return $post_id;
+      return $post_id;
     }

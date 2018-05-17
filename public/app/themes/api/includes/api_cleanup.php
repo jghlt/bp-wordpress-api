@@ -40,7 +40,7 @@
 
     function api_remove_version()
     {
-        return '';
+      return '';
     }
 
 
@@ -53,8 +53,8 @@
 
     function api_remove_thumbnail_dimensions($html)
     {
-        $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
-        return $html;
+      $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
+      return $html;
     }
 
 
@@ -66,11 +66,11 @@
 
     function api_set_default_imagelink_to_none()
     {
-        $image_set = get_option('image_default_link_type');
+      $image_set = get_option('image_default_link_type');
 
-        if ($image_set !== 'none') {
-            update_option('image_default_link_type', 'none');
-        }
+      if ($image_set !== 'none') {
+        update_option('image_default_link_type', 'none');
+      }
     }
 
 
@@ -82,6 +82,6 @@
 
     function api_remove_recent_comments_style()
     {
-        global $wp_widget_factory;
-        remove_action('wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ));
+      global $wp_widget_factory;
+      remove_action('wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ));
     }
