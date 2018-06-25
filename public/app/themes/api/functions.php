@@ -14,9 +14,9 @@
 
 ----------------------------------------------------------------------*/
 
-  include_once('includes/api_admin.php');
-  include_once('includes/api_cleanup.php');
-  include_once('includes/api_acf.php');
-  include_once('includes/api_cpt.php');
-  include_once('includes/api_routes.php');
-  include_once('includes/api_project.php');
+  include_once('includes/admin.php');
+  include_once('includes/cleanup.php');
+  include_once('includes/acf.php');
+  include_once('includes/cpt.php');
+  include_once('includes/routes.php');
+  include_once('includes/project.php');
