@@ -2,7 +2,7 @@
 Simple structured staring point for api-based WordPress builds. Project structure loosely based on [roots/bedrock](https://github.com/roots/bedrock). The aim of this project is to provide a simple semi headless cms for when the WP Rest api is overkill.
 
 ## Features  
-* api theme adapted to output json
+* api theme adapted to output json on any/all routes
 * simple user defined routes
 * caching with transients
 
