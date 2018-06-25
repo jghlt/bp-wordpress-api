@@ -15,11 +15,11 @@ Simple structured staring point for api-based wordPress builds. Project structur
 ## Installation  
 * `git clone git@github.com:jghlt/bp-wordpress-api.git`
 * `cd bp-wordpress-api`
-* rename `.env.example` to `.env` and fill out necessary config.
-* add necessary salts to `config/config.php`
+* rename `.env.example` to `.env` and fill out the necessary config
+* add salts to `config/config.php`
 * run `composer install`
 * rename `wp-config.example.php` to `wp-config.php` and move to `public/wp`
-* set up the necessary hosts/vhosts
+* set up hosts/vhosts
 * visit `http://example.com/wp/wp-admin` and run through the install
 
 
