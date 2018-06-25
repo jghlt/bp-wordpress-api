@@ -8,7 +8,7 @@ define('DB_HOST', getenv('DB_HOST'));
 define('DB_CHARSET', getenv('DB_CHARSET'));
 define('DB_COLLATE', getenv('DB_COLLATE'));
 
-$table_prefix  = 'wp_';
+$table_prefix  = getenv('DB_PREFIX');
 
 // urls
 // * site url must end with '/wp' or logins won't work
@@ -26,31 +26,31 @@ define('WPMU_PLUGIN_URL', WP_CONTENT_URL . '/mu-plugins');
 define('WP_DEFAULT_THEME', getenv('DEFAULT_THEME'));
 
 // settings
-define('WP_POST_REVISIONS', 3);
-define('AUTOSAVE_INTERVAL', 240);
-define('DISABLE_WP_CRON', false);
-define('DISALLOW_FILE_MODS', true);
-define('DISALLOW_FILE_EDIT', true);
-define('WP_AUTO_UPDATE_CORE', false);
-define('WP_HTTP_BLOCK_EXTERNAL', false);
-define('AUTOMATIC_UPDATER_DISABLED', true);
+define('WP_POST_REVISIONS', getenv('WP_POST_REVISIONS'));
+define('AUTOSAVE_INTERVAL', getenv('AUTOSAVE_INTERVAL'));
+define('DISABLE_WP_CRON', getenv('DISABLE_WP_CRON'));
+define('DISALLOW_FILE_MODS', getenv('DISALLOW_FILE_MODS'));
+define('DISALLOW_FILE_EDIT', getenv('DISALLOW_FILE_EDIT'));
+define('WP_AUTO_UPDATE_CORE', getenv('WP_AUTO_UPDATE_CORE'));
+define('WP_HTTP_BLOCK_EXTERNAL', getenv('WP_HTTP_BLOCK_EXTERNAL'));
+define('AUTOMATIC_UPDATER_DISABLED', getenv('AUTOMATIC_UPDATER_DISABLED'));
 
 // debugging
-define('WP_DEBUG', true);
-define('WP_DEBUG_LOG', true);
-define('WP_DEBUG_DISPLAY', true);
+define('WP_DEBUG', getenv('WP_DEBUG'));
+define('WP_DEBUG_LOG', getenv('WP_DEBUG_LOG'));
+define('WP_DEBUG_DISPLAY', getenv('WP_DEBUG_DISPLAY'));
 
 // cache
-define('WP_CACHE', false);
+define('WP_CACHE', getenv('WP_CACHE'));
 define('WPCACHEHOME', dirname( ABSPATH ) . '/app/plugins/wp-super-cache/');
 
 // salts
 // https://api.wordpress.org/secret-key/1.1/salt/
-define('AUTH_KEY',         'c6,Uc(19$n$!@i&Sg3y^B=z. A6,JdQV~l@[,{i5#Sj)a@Ez{LGTh^b{~Xbh&iJd');
-define('SECURE_AUTH_KEY',  ':AQ-[;u]]ruO!u3<~-J])G)?~^r$GT&R5EV,^NzTs|(-&a7-5VQs{i-#?~_&>]&)');
-define('LOGGED_IN_KEY',    '//JW_2(D6CH8`2^{A2F]kd*gmiY|$IToW1 stGG)VvGI(~kG%Y*UiF@m(kvIp[~c');
-define('NONCE_KEY',        'sQ@-Q:SMAb8_n{|kKVcthX3r~iPb,}p2Gq}_z;qDd(.buC%l?cZG-Z/+!v66bRp6');
-define('AUTH_SALT',        '`f~)l1^^&No*Ggtpwl0S]l/OJqA--ZAWn`t1Vh)mF+!EU2$+- J*W_*E<W*Z%T}a');
-define('SECURE_AUTH_SALT', '~_[A;L7;dV7AEk>`sV,/^ya:J(k`/0L/+.{klJ{R-:;d`ojr>~=+z#amO!.}0q)K');
-define('LOGGED_IN_SALT',   'g&4L2A|sJIv@DJ4 >z9-1%)1#d.<C-=Xrqu%zA#g8u,|p(icYh75U}g~%nO(%pdn');
-define('NONCE_SALT',       '0_62insTQK,X;c;+|z-u/N%w[0Z[=#LhZ$i!Q$O-xg_@aJX]:e`_&%S3{YHy,Y#j');
+define('AUTH_KEY',         '');
+define('SECURE_AUTH_KEY',  '');
+define('LOGGED_IN_KEY',    '');
+define('NONCE_KEY',        '');
+define('AUTH_SALT',        '');
+define('SECURE_AUTH_SALT', '');
+define('LOGGED_IN_SALT',   '');
+define('NONCE_SALT',       '');

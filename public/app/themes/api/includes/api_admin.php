@@ -42,7 +42,12 @@
   * image quality
   */
 
-    add_filter('jpeg_quality', create_function('', 'return 80;'));
+    add_filter('jpeg_quality', 'api_set_jpeg_quality' );
+
+    function api_set_jpeg_quality()
+    {
+      return 80;
+    }
 
 
   /*
@@ -157,13 +162,13 @@
       echo '<style type="text/css">
         body,
         html{
-            background-color:#F8F8F8 !important;
+          background-color:#F8F8F8 !important;
         }
 
         .login h1 a {
-            background: url('.get_bloginfo('template_directory').'/assets/src/icons/login.png) !important;
-            background-repeat:no-repeat;
-            background-size:cover !important;
+          background: url('.get_bloginfo('template_directory').'/login.png) !important;
+          background-repeat:no-repeat;
+          background-size:cover !important;
         }
       </style>';
     }
