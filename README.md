@@ -23,6 +23,6 @@ Simple structured staring point for api-based WordPress builds. Project structur
 * visit `http://example.com/wp/wp-admin` and run through the install
 
 ## Usage  
-* add routes here > `public/app/themes/api/routes.php`
-* add methods here > `public/app/themes/api/project.php`
+* add routes here > `public/app/themes/api/includes/routes.php`
+* add methods here > `public/app/themes/api/includes/project.php`
 * routing docs [here](https://github.com/Upstatement/routes)
